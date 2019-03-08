@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8"/>
+	<link rel="icon" href="img/snowflake.png" />
+    <title>HTML5页面</title>
+    <style>
+            .abc {
+                color: red;
+            }
+            .ef {
+                width: 500px;
+                height: 110px;
+            }
+            .gh {
+                width: 500px;
+                height: 90px;
+            }
+    </style>
+	<body>
+        <form action="" method="get">
+        <h1>毕业信息</h1>
+        <fieldset class="ef">
+            <legend class="abc">
+                学生信息
+            </legend>
+            姓&nbsp;名
+            <input type="text" name="name" placeholder="请输入姓名" required/>
+            &nbsp;<span class="abc">*</span>
+            <br>
+            学&nbsp;号
+            <input type="number" min="1" name="demoNum" placeholder="请输入学号" required/>
+            &nbsp;<span class="abc">*</span>
+            <br>
+            手&nbsp;机
+            <input type="tel" name="tel" placeholder="请输入手机号" required/>
+            &nbsp;<span class="abc">*</span>
+            <br>
+            邮&nbsp;箱
+            <input type="email" name="email" placeholder="请输入邮箱地址" required/>
+            &nbsp;<span class="abc">*</span>
+         </fieldset>
+         <br>
+         <fieldset class="gh">
+             <legend class="abc">
+                 录取情况
+             </legend>
+             录取学校
+             <input type="search" name="scholl" >
+             <br>
+             入学成绩
+             <input type="number" name="Num" min="1">
+             <br>
+             入学时间
+             <input type="date">
+         </fieldset>
+         <br>
+         <input type="submit" value="提交"/>
+        </form>
+    </body>
+</html>
