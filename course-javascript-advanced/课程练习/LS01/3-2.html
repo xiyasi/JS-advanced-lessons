@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>train</title>
+		<script>
+			//编码
+			//将特定unicode的值转换成字符串
+			String.fromCharCode(97,98,99);
+
+            //将特定索引位置的字符转换位unicode码出
+			var str = "abcdefgij";
+			str.charCodeAt(0);
+			//str.fromCharCodeAt(0);
+ 
+            //截取字符串的开始位置和结束位置
+            //如果截取的结束位置小于0，结束位置为str.length + 截取结束参数
+			str.slice(0,3);
+
+            //截取长度
+            //可以缺省，表示起始位置到字符串结束
+			str.substr(0,3);
+            
+            //截取的起始位置，截取的结束位置
+            //如果截取起始位置大于结束位置，两者会互换位置，如果超出0到长度范围，会被截断
+            str.substring();
+            
+            //用特定的分割符将字符串分割成数组,限定了生成数组的长度
+            var str1 = "ab-cd-ef-gh";
+            str1.split("-"，2);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

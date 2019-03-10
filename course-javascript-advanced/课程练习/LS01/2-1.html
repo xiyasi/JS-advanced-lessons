@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>train</title>
+		<script>
+			var obj1 = {"name":"zs"};
+			var obj2 = obj1;
+			obj2.name = "lisi";
+			console.log(obj1);
+
+			var arr1 = [1,2,3,4,5];
+			var arr2 = arr1;
+			arr2[0] = 6;
+			console.log(arr1);
+
+            //深拷贝
+			var obj3 = {"name":"za"};
+			var obj4 = {};
+			var name = obj3.name;
+			obj4.name = name;
+
+            //比较的是引用的地址是否相同
+			var obj5 = {};
+			var obj6 = {};
+			console.log(obj5 == obj6);
+
+            //判断的是两边变量的值，三个等号判断的是类型还有变量的值
+			var num3 = 10;
+			var num4 = 10;
+			console.log(num3 == num4);
+
+            var a = 6;
+			function fn1(x){
+				x = 5;
+			}
+            fn1(a);
+
+            var obj7 = {"name":"zs"};
+            function fn1(x){
+            	x.name = "lisi";
+            }
+            fn1(obj7);
+
+            //无穷大
+            var y1 = 2/0;
+            console.log(y1);
+
+            var x = 20;
+            console.log(isNaN(x));
+
+            //截取字符串的起始位置和结束位置，负数可以从反方向截取计算
+            var str = "ab_cd_ef";
+            //str.slice(0，-1);
+
+            //分组截取，作为数组的数据元素
+            //以特定的分隔符来分割字符串，将子串作为数组的元素，生成一个数组
+            str.split("_");
+
+            var str0 = "abcdef";
+            console.log(str0.length);
+            
+            //实际上是调用对象来进行操作，解释器默认完成装箱操作
+            var str0 = "abcdef";
+            var strObject = new String(str0);
+            console.log(strObject.length);
+
+            console.log(Boolean(null));//false
+
+            console.log(Number(undefined));//NaN
+            console.log(Number("abc"));//NaN
+            console.log(Number("123.345xx"));//NaN
+            console.log(Number({x:1,y:2}));//NaN
+
+            console.log(String({x:1,y:2}));//[object Object]
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

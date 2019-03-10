@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>train</title>
+		<script>
+			//ES5 ECMAScript 5是一个语言标准
+			//js是完全基于ES5实现的脚本语言
+			//主流版本ES5 ES6
+
+			if(true){
+				var name = "zs";
+			}
+			console.log(name);
+			//ES5 标准下没有块级作用域
+
+			if(false){
+				var name = "zs";
+			}
+			console.log(name);
+			//会显示变量未声明
+
+            var name；
+			if(false){
+				name = "zs";
+			}
+			console.log(name);
+			//全局变量会显示
+
+			for(var i = 0; i < 3; i++){
+
+			}
+            console.log(i);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

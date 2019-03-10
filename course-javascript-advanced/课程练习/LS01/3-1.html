@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>train</title>
+		<script>
+			var num1 = 20.367;
+			//toFixed(n)保留特定位数的小数
+			//超出特定位数的四舍五入，返回的是字符串
+			num1.toFixed(3);
+
+			var num1 = 20;
+			var numobject = new Number(num1);
+			//console.log(numobject._proto_ == Number.proto);
+
+			numobject.toFixed();
+
+            //toPrecision(数字位个数)，四舍五入
+            //数字为个数小于数字的整数位时，表示成指数形式
+            //大于或等于整数位时，直接按四舍五入截取
+			var num2 = 12345.6779;
+			num2.toPrecision(1);
+
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

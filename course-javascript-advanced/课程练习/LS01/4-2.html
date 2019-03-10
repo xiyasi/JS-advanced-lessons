@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>train</title>
+		<script>
+			//非严格模式下，不使用来显示声明变量，则该变量自动转化为全局变量
+			function fn2(){
+				name = "za";
+			}
+			fn2();
+			console.log(name);
+
+			function fn3(){
+				console.log(this);
+			}
+			fn3();
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
