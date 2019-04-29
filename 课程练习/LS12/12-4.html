@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>应用</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <script>
+        function foo(x){
+            var tmp = 10;
+            return function(y){
+                console.log(x+y,++tmp);
+            }
+        }//有闭包
+
+        var tmp = 10;
+        function foo(x){
+            return function(y){
+                console.log(x+y,++tmp);
+            }
+        }
+        var fee = foo();
+        fee();//没有闭包了
+
+        function counter(){
+            var n = 0;
+            return{
+                count:function(){return ++n;},
+                reset:function(){n = 0;return n;}
+            }
+        }
+        var c = counter(),d = counter();
+        console.log(c.count());
+        console.log(d.count());
+        console.log(c.reset());
+        console.log(c.count());
+        console.log(d.count());
+    </script>
+</body>
+</html>

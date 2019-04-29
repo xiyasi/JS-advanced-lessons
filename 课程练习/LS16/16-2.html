@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LS16</title>
+</head>
+<body>
+<script>
+    var Person = function(name,age){
+        var namePrivate = name;
+        var agePrivate = age;
+        this.showMe = function(){
+            console.log(namePrivate,agePrivate);
+        }
+    }
+    var p1 = new Person("Mike",23);
+    p1.showMe();
+
+    function Point (x,y){
+        this.x = x;
+        this.y = y;
+        this.moveTo = function(x,y){
+            this.x = x;
+            this.y = y;
+        }
+    }
+    var p = new Point(10,10);
+    p.moveTo(5,5);
+    //函数内部的this指向取决于函数调用的主体是谁
+
+    objA = {name:"AA",x:1};
+    objB = {name:"BB",x:5};
+    objA.test = function () {
+        console.log(this.name,this.x);
+    };
+
+    objA.test();//AA 1
+    objA.test.call(objB);//BB 5
+    //函数也是对象，函数对象
+    //函数对象的构造函数 Function
+    //函数对象.__proto__ == Function.prototype
+    var bird = {
+        name:"polly",
+        fly:function(m,n){
+            console.log("i'm:"+this.name+" i can fly ___",m,n);
+        }
+    };
+
+    var me = {
+        name:"QL"
+    };
+    bird.fly(5,6);
+    bird.fly.call(me,7,8);
+</script>
+</body>
+</html>

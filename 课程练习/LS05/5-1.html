@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LS05</title>
+</head>
+<script>
+    var a = 34;
+    if(a = 45){
+        console.log("是否会输出？");
+    }
+
+    var b = 34;
+    if(45 == b){
+        console.log("是否会输出？");
+    }
+
+    console.log("1"+"2"); //"12"
+    console.log("1"+2); //"12"
+    console.log(1+{}); //"1[object Object]"
+    console.log(true+true); //2
+    console.log("5"-2); //3
+
+    var x = "1";
+    console.log(++x); //2 
+    var x = "1";
+    console.log(x+1);//11
+
+    var x = "1";
+    console.log(x+=1);
+    var x = 1;
+    console.log(x+=1);
+
+    var i=1;
+    var y = ++i + ++i + ++i;
+    console.log(y);
+</script>
+<body>
+
+</body>
+</html>

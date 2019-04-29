@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LS16</title>
+</head>
+<body>
+<script>
+    var point = {
+    x:0,
+    y:0,
+    moveTo:function (x,y) {
+        //var that = this;(1)软绑定
+        //内部嵌套函数
+        function moveToX() {
+            this.x = x;
+        }
+        //内部嵌套函数
+        function moveToY() {
+            this.y = y;//
+        }
+        moveToX();//(2)moveToX.call(this);
+        moveToY();
+        //(3)moveToX.bind(point)();
+        //moveToY.bind(point)();
+    }//moveToX.call(this);通过间接调用来解决
+};
+point.moveTo(2,2);
+console.log(point);
+</script>
+</body>
+</html>

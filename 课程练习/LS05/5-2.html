@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LS05</title>
+</head>
+<script>
+console.log(3===3);
+console.log(3==="3");
+console.log(3=="3");
+console.log(3==new String(3));
+console.log(3===new String(3));
+
+var obj1 = new String("xyz");
+var obj2 = new String("xyz");
+console.log("xyz"===obj1);
+console.log(obj1 == obj2);
+console.log(obj1 === obj2);
+console.log(obj1 == new String("xyz"));
+
+var obj1 = new String("xyz");
+var obj2 = new String("xyz");
+console.log("xyz"!=obj1);
+console.log(obj1 !== obj2);
+console.log(obj1 != obj2);
+console.log(obj1 != new String("xyz"));
+
+console.log(2 == 2);
+console.log(new Number(2) == new Number(2));
+console.log(2 == new Number(2));
+
+var obj1 = {x:2,y:[1],z:false};
+var obj2 = {x:2,y:[1],z:new Boolean(false)};
+console.log(obj1.z == obj2.z);
+</script>
+<body>
+
+</body>
+</html>

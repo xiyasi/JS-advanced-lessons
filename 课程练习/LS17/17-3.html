@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>train</title>
+		<style></style>
+		<script>
+function A(id) {
+    this.publicId = id;
+    var privateId = 456;
+    this.getId = function () {
+        console.log(this.publicId,privateId);
+    };
+}
+var a = new A(123);
+console.log(a.publicId);
+
+var p = new Person("jack");
+console.log(p.__proto__ === Person.prototype);
+console.log(p.__proto__ === p.constructor.prototype);
+console.log(Object.prototype === p.constructor.prototype);
+console.log(({getName:function(){}}).__proto__ === p.constructor.prototype);
+        
+        </script>
+	</head>
+	<body>
+	</body>
+</html>

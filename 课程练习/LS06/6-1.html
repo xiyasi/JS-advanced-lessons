@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LS03</title>
+</head>
+<script>
+console.log(2>1&&4<5);//ture
+console.log(true&&(!2));//false
+console.log(false&&("2" == 2));//false
+console.log(false&&false);//false
+
+console.log(2>1||4<5);//ture
+console.log(true||(!2));//ture
+console.log(false||("2" == 2));//ture
+console.log(false||false);//false
+
+console.log(2&&4);//4
+console.log(0&&4);//0
+console.log({x:2}&&{name:"Jack"});//object
+console.log(null&&"hello");//null
+console.log({}&&"world");//world
+
+console.log(2||4);//2
+console.log(0||4);//4
+console.log({x:2}||{name:"Jack"});//object
+console.log(null||"hello");//hello
+console.log({}||"world");//object
+
+console.log((new Boolean(false))&&234);//234
+console.log((new Boolean(false))||234);//boolean
+</script>
+<body>
+
+</body>
+</html>

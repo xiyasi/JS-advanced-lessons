@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>train</title>
+		<script>
+            console.log(1 === 1.0);//ture
+            console.log(Number("xyz"));//NaN
+            console.log(3/0);//infity
+
+            var a = 10;
+            console.log(++a);//11
+
+            var b = 20;
+            console.log(b++);//20
+
+            var a = "abc";
+            var b = "def";
+            var c = a+b;
+            console.log(c);//abcdef
+
+            var str1 = "aaa".concat("bbb");
+            var str2 = "abcdef".slice(2);
+            var str3 = "abcdef".slice(2,5);
+            var str4 = "abcdef".slice(-2);
+            var str5 = "abcdef".slice(2,-2);
+            console.log(str1);
+            console.log(str2);
+            console.log(str3);
+            console.log(str4);
+            console.log(str5);
+            //aaabbb cdef cde ef cd
+
+            var str6 = "abcdef".split("c");
+            var str7 = "abcdef".split("c",1);
+            var str8 = "abcdef".split("c",2);
+            console.log(str6);
+            console.log(str7);
+            console.log(str8);
+            //["ab", "def"] ["ab"] ["ab", "def"]
+
+            var str9 = "abcdef".charAt(2);
+            var str10 = "abcdefabcdef".indexOf("d",1);
+            var str11 = "abcdefabcdef".indexOf("d",4);
+            var str12 = "    abc def     \r\n  ".trim();
+            console.log(str9);
+            console.log(str10);
+            console.log(str11);
+            console.log(str12);
+            //c 3 9 abc def
+
+            var str13 = "abcdefghijklmn";
+            var str14 = str13.substr(2,5);
+            console.log(str13,str14);
+
+            var str15 = str13.substring(2,5);
+            console.log(str13,str15);
+            //abcdefghijklmn cdefg abcdefghijklmn cde
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

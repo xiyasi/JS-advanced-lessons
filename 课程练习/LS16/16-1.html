@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LS16</title>
+</head>
+<body>
+<script>
+    var x = 1;
+    var y = 2;
+    alert(window.x);
+    /*
+    this取决于函数的调用主体
+    */
+    function thisTest(){
+        console.log(this);
+    }
+
+    function thisTest2(){
+        "use strict";
+        console.log(this);
+        return this === undefined?ture:false;
+    }
+    thisTest2();
+
+    var a = 10,b = "Hi";
+    function thisTest3(){
+        this.a = 20;
+        delete this.b;
+        this.c = "新添加属性";
+    }
+    thisTest3();
+    console.log(a,c);
+    console.log(b);
+
+    var point ={
+        x:0,
+        y:0,
+        moveTo:function(x,y){
+            this.x = x;
+            this.y = y;
+        }
+    }
+    /*
+    函数或者方法内部的指向，取决于该函数的调用主体
+    */
+    point.moveTo(10,10);
+</script>
+</body>
+</html>

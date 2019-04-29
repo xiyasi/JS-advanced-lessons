@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>train</title>
+        <style></style>
+        <script>
+            var a = 3;
+            a += 5;
+            console.log(a);
+
+            console.log(typeof NaN);
+            console.log(typeof Infinity);
+            //类型为number
+
+            //数据类型
+            var num = 1;
+            var str = "some string";
+            var b = true;
+            var n = null;
+            var u = undefined;
+
+            var arr = ["apple", "pear", "banana"];
+            var func = function(){
+                return "this a function";
+            };
+            var obj = new Object();
+            obj.name = "test";
+
+            console.log("\n");
+            console.log(typeof num); //number
+            console.log(typeof str); //string
+            console.log(typeof b); //boolean
+            console.log(typeof n); //object
+            console.log(typeof u); //undefined
+            console.log("\n");
+            console.log(typeof func); //function
+            console.log(typeof obj); //object
+
+
+            console.log(typeof Number); //function
+            console.log(typeof Boolean); //function
+            console.log(typeof Object); //function
+            console.log(typeof Array); //function
+            console.log(typeof Function); //function
+            console.log(typeof RegExp); //function
+            console.log(typeof Math); //object
+            console.log(typeof JSON);//object
+
+            var a1 = 2;
+            var a2 = "2";
+            console.log(a1==a2);//true 
+            console.log(a1===a2);
+
+            var b1 = {};
+            var b2 = {};
+            console.log(b1==b2);//false
+            console.log(b1===b2);//false
+            console.log(b1===b1);//true
+
+            var c1 = 23;
+            var c2 = new Number(23);
+            console.log(c1==c2);//true
+            console.log(c1===c2);//false
+
+            var str2 = "abc";
+            console.log(str2.length);
+            str2.length = 1;
+            console.log(str2);
+            //原始类型变量的不可变性，指的是包装对象的改变并不影响原始类型的变量
+
+
+            console.log({}instanceof Object);
+            console.log([]instanceof Object);
+            console.log([]instanceof Array);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

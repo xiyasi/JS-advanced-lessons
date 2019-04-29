@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+	
+</body>
+<script>
+	for(var i=0;i<10;i++){
+        console.log("i:",i);
+    }
+    console.log("out of for:",i);//10
+
+    function max(a,b) {
+        return a>b?a:b;
+    }
+    console.log(max(2,3));//3
+
+    var min = function(a,b){
+        return a<b?a:b;
+    };
+    console.log(min(2,3));//2
+
+    foo();
+    function foo() {
+        console.log("foo");
+    }//foo
+
+    function f1() {
+        console.log(arguments);
+        var argArr = Array.prototype.slice.call(arguments);
+        console.log(argArr);
+    }
+    f1(2,3,4,"a");
+    //[2, 3, 4, "a"]
+
+    function f2(a,b,c,d) {
+        console.log(a,b,c,d);
+    }
+    f2(2,3);
+    //2 3
+
+    function f3() {
+        gVar = 23;
+    }
+
+    var x = 23;
+    var foo = function () {
+        var x = 34;
+        console.log("inside x:",x);
+        y = 45;
+        console.log("inside y:",y);
+    };
+    foo();
+    console.log("outside x:", x);
+    console.log("outside y:", y);
+
+    console.log(a);
+    if(true){
+        var a = 2;
+    }
+    console.log(a);
+
+    (function (x,y) {
+        return x>y?x:y;
+    }(4,5));
+
+    var result = function min(x,y) {
+        return x<y?x:y;
+    }(2,3);
+    console.log(result);
+</script>
+</html>

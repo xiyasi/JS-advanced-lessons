@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>train</title>
+		<script>
+			function foo() {
+            var n = 10;
+            var m = true;
+            var str = "Hello World"; //堆
+            var obj = { value: "Hello World" };//栈
+            };
+            foo();
+
+            var a =123;
+            function foo1(x){
+	            x = 345;
+            }
+            foo1(a);
+            console.log(a);//123
+
+            var a ={y:123};
+            function foo2(x){
+	            x.y = 345;
+            }
+            foo2(a);
+            console.log(a.y);//345
+
+            var a ={y:123};
+            function foo3(x){
+	            x.y = 345;
+	            x = {y:456};
+            }
+            foo3(a);
+            console.log(a.y);//345
+
+            var a ={y:123};
+            function foo4(x){
+            x = {y:456};	
+            x.y = 345;	
+            }
+            foo4(a);
+            console.log(a.y);//123
+
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>train</title>
+		<script>
+            var a;
+            console.log(a);//undefined
+
+            function foo(x,y){
+                console.log(x,y);
+            }
+            foo(1);
+
+            function fee(){
+                //null
+            }
+
+            var fee = fee();
+            console.log(fee);
+
+            console.log(typeof null);
+
+            var obj = {x:1,y:2};
+            console.log(obj.__proto__ === Object.prototype);
+            console.log(Object.prototype);
+
+            var arr = [1,2,3,4,5];
+            console.log(Array.prototype);
+            console.log(arr.__proto__.__proto__ === Object.prototype);
+
+            function foo() { 
+                console.log("foo function!");
+            };
+            console.log(foo.__proto__ === Function.prototype);
+            console.log(foo.__proto__.__proto__ === Object.prototype);
+
+            console.log(obj instanceof Object);
+            console.log(arr instanceof Object);
+            console.log(foo instanceof Object);
+            console.log(foo === window.foo);
+
+            for(var k in obj){
+                console.log(k,obj[k]);
+            }
+
+            console.log(object.keys(obj));
+            console.log("x" in obj);
+
+            for(var k in foo){
+                console.log(k,foo[k]);
+            }
+            console.log("call" in foo);//true
+            console.log("apply" in foo);//true
+            console.log("arguments" in foo);//true
+
+            var a = 123;
+            var b = new Number(a);
+
+            console.log(a == b);
+            console.log(a === b);//true or false 为什么
+
+            //临时包装对象
+            var str = "abcde";
+            console.log(str.length);//5 临时包装成了String对象
+            str.length = 1;
+            console.log(str.length,str);//5 "abcde" 临时包装对象并不影响原始值
+
+            var arr = [1,2,3,4];
+            console.log(arr.length);//4
+            arr.length = 1;
+            console.log(arr.length,arr);//1 [1]
+
+            console.log(Boolean(undefined));//false
+            console.log(Boolean(null));//false
+            console.log(Boolean(0));//false
+            console.log(Boolean(NaN));//false
+            console.log(Boolean(1));//ture
+            console.log(Boolean(""));//false
+            console.log(Boolean("abc"));//ture
+            console.log(Boolean({}));//ture
+
+            if(new Boolean(false)){
+                console.log("执行");
+            }
+
+            //Part 2
+            console.log(Number(undefined));//nan
+            console.log(Number(null));//0
+            console.log(Number(true));//1
+            console.log(Number(false));//0
+            console.log(Number(""));//0
+            console.log(Number("abc"));//nan
+            console.log(Number("123.345xx"));//nan
+            console.log(Number("32343,345xx"));//nan
+            console.log(Number({x:1,y:2}));//nan
+
+            console.log(parseFloat("123.345xx"));
+            console.log(parseFloat("32343,345xx"));
+            console.log(parseInt("123.345xx"));
+            console.log(parseInt("32343,345xx"));
+
+            //Part 3
+            console.log(String(undefined));
+            console.log(String(null));
+            console.log(String(true));
+            console.log(String(false));
+            console.log(String(0));
+            console.log(String(234));
+            console.log(String({x:1,y:2}));
+
+            var a = 3;
+            var b = 4;
+            console.log(typeof (a>b),a>b);
+            console.log(typeof (a==b),a==b);
+            console.log(typeof (a<b),a<b);
+
+            var c = "img" + 3 +".jpg";
+            var d = "23" - 5;
+            console.log(c,d);
+
+            var e = !23;
+            var f = !!34;
+            var g = !!{};
+            console.log(e,f,g);
+
+            var h = {x:1};
+            if(h){
+                console.log("h:",h);
+            }
+
+            //Part2222222 显式类型转换
+            Boolean();
+            Number();
+            String();
+            Object();
+            parseInt();
+            parseFloat();
+
+            toString();
+            valueOf();
+
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
