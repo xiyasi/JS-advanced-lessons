@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+var x = 20;
+
+function f(){
+    var getNumFuncs = [];//函数数组
+    for(var i=0;i<10;i++){
+        (function (j) {
+            getNumFuncs[j] = function(){return j;};
+        })(i);
+    }
+    return getNumFuncs;//设置断点，查看变量共享问题
+}
+var tmp = f();
+tmp[3]();
+
+function f(){
+    var getNumFuncs = [];//函数数组
+    var j;
+    for(var i=0;i<10;i++){
+        j = i;
+        getNumFuncs[i] = function(){
+            return j;
+        };
+    }
+    return getNumFuncs;//设置断点，查看变量共享问题
+}
+var tmp = f();
+tmp[3]();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

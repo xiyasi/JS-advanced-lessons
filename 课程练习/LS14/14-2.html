@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LS06</title>
+<script>
+    var obj = {_x:1};
+    Object.defineProperties(obj,{
+    y:{value:2,writable:true,configurable:true,enumerable:true},
+    z:{value:2,writable:true,configurable:true,enumerable:true},
+    x:{
+        get:function(){return this._x;},
+        set:function (val) {
+            this._x = val;
+        }
+    }
+});
+
+var book={};
+
+Object.defineProperties(book,{
+    _year:{
+        value:2004,
+        writable:true 
+    },
+    edition:{
+        value:1,
+        writable:true
+    },
+//添加了访问器属性(year)
+    year:{
+//调用get方法读取属性
+        get:function(){
+            return this._year;
+        },
+//调用set方法写入属性
+        set:function(newValue){
+            if (newValue>2004) {
+                this._year=newValue;
+                this.edition+=newValue-2004;
+            }
+        }
+    }
+});
+//测试
+book.year=2006;
+
+
+
+var empty = {};
+var obj2 = Object.create(empty,{
+   x:{value:1}, y:{value:2,enumerable:true}
+});
+console.log(obj2);
+console.log(obj2.hasOwnProperty("x"));
+
+var o4 = Object.create(o3);
+Object.defineProperty(o4,"x",{
+    set:function (val) {
+        this._x = val;
+    },
+    get:function () {
+        return ++this._x;
+    }
+});
+o4.x = 56;
+console.log(o4.x);
+
+var a = 23;
+console.log(Object.getOwnPropertyDescriptor(window,"a"));
+delete a;
+</script>
+</head>
+<body>
+
+</body>
+</html>

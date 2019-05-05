@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LS07</title>
+    <script>
+        var proObj = {
+    z:3
+};
+
+var obj = Object.create(proObj);
+obj.x = 1;
+obj.y = 2;
+
+console.log(obj.x);//1
+console.log(obj.y);//2
+console.log(obj.z);//3
+
+console.log("z" in obj);//true
+console.log(obj.hasOwnProperty("z"));//false
+
+obj.z = 5;
+
+console.log(obj.hasOwnProperty("z"));
+console.log(obj.z);
+console.log(proObj.z);
+
+obj.z = 8;
+console.log(obj.z);
+
+delete obj.z;//true
+console.log(obj.z);
+
+delete obj.z;//true
+console.log(obj.z);//still 3
+
+delete  obj.__proto__.z;
+console.log(obj.z);
+
+function Person(age,name) {
+    this.name = name;
+    this.age = age;
+}
+Person.prototype.sayHi = function () {
+    console.log("Hi,i'm "+this.name);
+};
+var p1 = new Person(20,"Jack");
+console.log(p1.name);
+console.log(p1.age);
+p1.sayHi();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
